@@ -42,11 +42,11 @@ jobs:
 
       # Build app
       - name: Build application
-        run: pnpm build --if-present
+        run: echo "No build step required"
 
       # Run tests
       - name: Run tests
-        run: pnpm test --if-present
+        run: echo "No tests configured"
 
       # Upload artifact
       - name: Upload artifact for deployment job

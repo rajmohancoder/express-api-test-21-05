@@ -71,18 +71,9 @@ jobs:
           name: node-app
 
       # Login to Azure
-      - name: Login to Azure
-        uses: azure/login@v2
-        with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_1814B7B6975745188DFFCFA12912BFAE }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_B50AA9F2B4BB4BA48C861ADE06F0467D }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_860D3C62469D4D8589ED3C1E8F7224A5 }}
-
-      # Deploy to Azure App Service
-      - name: Deploy to Azure Web App
-        id: deploy-to-webapp
+      - name: Deploy to azure web apps
         uses: azure/webapps-deploy@v3
         with:
           app-name: 'express-api-test-21-05'
-          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
           package: .

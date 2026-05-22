@@ -17,7 +17,7 @@ let products = [
   { id: 3, name: "Keyboard", price: 79.99, stock: 150 },
 ];
 
-let nextId = 4; // Auto-increment ID counter // test // test1
+let nextId = 4; // Auto-increment ID counter // test // test1 // test2
 
 // -----------------------------------------------
 // ROUTES
